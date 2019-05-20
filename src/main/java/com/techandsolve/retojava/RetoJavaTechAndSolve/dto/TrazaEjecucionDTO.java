@@ -1,25 +1,21 @@
-package com.techandsolve.retojava.RetoJavaTechAndSolve.model;
+package com.techandsolve.retojava.RetoJavaTechAndSolve.dto;
 
-import javax.persistence.*;
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
-@Entity
-public class TrazaEjecucion {
+public class TrazaEjecucionDTO implements Serializable {
 
-    @Id
-    @GeneratedValue
-    private Long id;
+    private static final long serialVersionUID = 1513014725557775515L;
 
     private Long cedula;
-
     private LocalDateTime fechaEjecucion;
 
-    public Long getId() {
-        return id;
+    public TrazaEjecucionDTO() {
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public TrazaEjecucionDTO(Long cedula, LocalDateTime fechaEjecucion) {
+        this.cedula = cedula;
+        this.fechaEjecucion = fechaEjecucion;
     }
 
     public Long getCedula() {
