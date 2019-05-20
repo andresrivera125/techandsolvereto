@@ -16,11 +16,11 @@ public class DiasTrabajandoController {
 
     @GetMapping("/version")
     public String getVersion() {
-        final String s = "Version 1.0.1";
+        final String s = "Version 1.0.0";
         return s;
     }
 
-    @PostMapping("/procesar")
+    @GetMapping
     public AnswerDiasTrabajandoDTO procesarEjecucion(@RequestBody InformacionEjecucionDTO informacionEjecucionDTO){
         return diasTrabajandoService.procesarEjecucion(informacionEjecucionDTO);
     }
